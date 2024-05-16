@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <header claas="w3-container w3-green">
+        <div class="container"> 
+            <nav class="navbar">
+              <a href="index.html" class="nav-branding">Kaila</a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+              </ul>
+    
+              <!-- Hamburger Menu -->
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+         </div>
+
+         <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="contact">
+            <img class="w3-image" src="assets/Contact Header.jpg" alt="Flower" width="1600" height="500">
+            <div class="w3-display-bottomleft w3-padding-large ">
+              <h1 class="w3-xxlarge w3-text-white">Contact Me</h1>
+            </div>
+          </header>
+       </header>
+  
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
+</script>
+    
+
+      
+       
+<div class="fcf-body">
+
+    <div id="fcf-form">
+    <h3 class="fcf-h3">Contact Me</h3>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="https://formsubmit.co/b6fffdec1c5d9d531a4e0c1d5a8e5ca0">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your Name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your Email Address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your Message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+        <div class="fcf-credit" id="fcf-credit">
+        <a href="https://www.majesticform.com" target="_blank"></a>
+        </div>
+
+    </form>
+    </div>
+
+</div>
+
+</body>
+</html>

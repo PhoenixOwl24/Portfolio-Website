@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+    <header>
+        <header claas="w3-container w3-green">
+        <div class="container"> 
+            <nav class="navbar">
+              <a href="index.html" class="nav-branding">Kaila</a>
+              <ul class="nav-menu">
+                <li class="nav-item">
+                  <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+              </ul>
+    
+              <!-- Hamburger Menu -->
+              <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+         </div>
+
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="assets/10BB3B07-BA9E-4CFA-97FD-61E7FB4ADC26_1_105_c-2.jpg" class="w3-round w3-image " alt="sunset" width="600" height="800">
+    </div>
+
+    <div class="w3-col m5 w3-padding-large">
+      <h1 class="w3-center w3-text-black">About Me <hr></h1><br>
+      <p class="w3-large w3-text-white">Hello! My name is Kaila, and I'm passionate about capturing moments and crafting stories through various media. I currently work at a vibrant tattoo shop, where I serve as the social media marketer. My role allows me to blend creativity with strategy, showcasing the artistry of our talented tattooists through engaging and visually appealing content. <br><br>
+        Behind the camera is where I truly come alive. I'm skilled in photography, videography, and editing, which lets me transform ideas into stunning visuals that resonate with our audience. Whether I'm snapping a candid shot, filming an intricate tattoo process, or piecing together a compelling video, I strive to bring a unique and authentic perspective to every project. <br><br>
+        I am also pursuing a Bachelor of Fine Arts in Communication Design at City Tech. This educational journey enhances my understanding of visual storytelling and design principles, enriching the content I create both professionally and personally. <br><br>
+        When I'm not immersed in work or studies, you can find me indulging in my hobbies. I'm an avid sticker collector, always on the lookout for unique and quirky designs to add to my collection. I also have a deep love for reading, constantly exploring new worlds and ideas through the pages of a book. <br><br>
+        I believe in the power of visual communication and am dedicated to honing my craft, whether it is behind the camera, in front of a computer editing, or through the lens of my studies. I'm excited to continue growing as a content creator and designer, sharing my journey and passions along the way.
+     </div> 
+  </div>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<footer class="w3-container w3-pink w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p><a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Kaila 2024</a></p>
+</footer>
+</body>
+</html>
